@@ -1,10 +1,4 @@
-// =============================================================================
-// RESET — Minimal, Modern CSS Reset
-// -----------------------------------------------------------------------------
-// Intentionally minimal: only what is needed for consistent box sizing and
-// sensible defaults. Not a full "reset everything" stylesheet, so native
-// semantics and default accessible behaviors are preserved.
-// =============================================================================
+
 
 @layer reset {
   *,
@@ -27,7 +21,6 @@
     min-height: 100vh;
   }
 
-  // Sensible default media sizing — media never overflows its container.
   img,
   picture,
   video,
@@ -51,8 +44,6 @@
     list-style: none;
   }
 
-  // Fieldsets default to a content-based min-width that can overflow grid
-  // and flex layouts.
   fieldset {
     min-width: 0;
   }

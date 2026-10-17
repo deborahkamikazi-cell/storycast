@@ -1,16 +1,3 @@
-// =============================================================================
-// MAIN — Entry Point
-// -----------------------------------------------------------------------------
-// Uses the modern Sass module system (@use, not the deprecated @import).
-// Each partial declares its own rules inside a named CSS cascade layer, and
-// the order below fixes the layers' priority (low → high):
-//
-//   reset  <  base  <  layout  <  components  <  utilities
-//
-// This means, e.g., a focus style in _accessibility.scss (utilities layer)
-// will always win over a conflicting component style, regardless of
-// selector specificity or source order.
-// =============================================================================
 
 @use "reset";
 @use "colors";
@@ -20,7 +7,4 @@
 @use "components";
 @use "accessibility";
 
-// Fixes the layers' cascade priority (low → high). Must come after the
-// @use rules above (Sass requires @use first), but it still works as a
-// forward-declaration of layer order in the compiled CSS.
-@layer reset, base, layout, components, utilities;
+

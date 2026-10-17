@@ -1,11 +1,4 @@
-// =============================================================================
-// TYPOGRAPHY — Design Tokens & Heading Hierarchy
-// -----------------------------------------------------------------------------
-// The Figma designs pair a serif display face for headings with a clean sans
-// body face. No external font files were supplied, so this uses robust,
-// widely-installed serif/sans system stacks that achieve the same visual
-// intent without a network font request (see README "Known limitations").
-// =============================================================================
+
 
 @layer base {
   :root {
@@ -16,12 +9,8 @@
     --font-family-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas,
       monospace;
 
-    // "Readability Font Mode" fallback stack — a user-togglable alternative
-    // body face with simple, highly-distinct letterforms. Not the real
-    // OpenDyslexic typeface (no font file was supplied); see README.
     --font-family-readable: Verdana, Tahoma, "Trebuchet MS", sans-serif;
 
-    // Fluid type scale
     --font-size-xs: clamp(0.72rem, 0.7rem + 0.1vw, 0.8rem);
     --font-size-sm: clamp(0.82rem, 0.8rem + 0.1vw, 0.9rem);
     --font-size-base: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
@@ -41,8 +30,7 @@
 
     --letter-spacing-label: 0.09em;
 
-    // User-controlled font scale multiplier, toggled with zero JS via the
-    // CSS-only text-scale control in _accessibility.scss (checkbox + :has()).
+  
     --user-font-scale: 1;
   }
 
@@ -84,7 +72,6 @@
   h3 {
     font-size: var(--font-size-lg);
   }
-
   h4 {
     font-size: var(--font-size-md);
     font-family: var(--font-family-base);
@@ -101,8 +88,7 @@
     color: var(--color-link);
   }
 
-  // Small, letter-spaced "eyebrow" labels used throughout the archive UI
-  // (e.g. "ARCHIVE / REMEMBRANCE", "FEATURED AUDIO-VISUAL ARCHIVAL RECORD").
+
   .label {
     display: inline-block;
     font-size: var(--font-size-xs);
