@@ -267,3 +267,5 @@ literally would have meant publishing misinformation:
 Everything else — the ribbon/header pattern, hero layout, card grids, pillar
 list, feedback form, footer structure, and overall tone — follows the
 screenshots directly.
+
+Here is a link to the site maping : https://docs.google.com/document/d/1FQbTXw8ihZaYwrx92u0EdY7rPY9C4kj5JscjWMTCJF0/edit?tab=t.0
