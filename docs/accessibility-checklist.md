@@ -41,11 +41,15 @@ been earned yet.
       `getComputedStyle`. In browsers without `:has()` support, the controls
       remain visible, labeled, and focusable — they simply have no visual
       effect yet (graceful degradation, never a broken/fake control).
-- [x] Native `<video>`/`<audio>` markup is prepared (commented, with TODOs)
-      using real browser-native controls and a `<track kind="captions">`
-      element — no custom non-functional player chrome was built, because a
-      custom scrubber/caption-toggle UI would require JavaScript this
-      project does not use.
+- [x] Two testimony videos are embedded via the standard YouTube `iframe`
+      embed method (`index.html` and the Story Detail page) rather than
+      downloaded/re-hosted files — this is the publisher-sanctioned sharing
+      method, and it gives visitors YouTube's own native player: a working
+      CC/captions button (when the publisher has captions), keyboard
+      operability, fullscreen, and playback-speed controls, all for free and
+      without any JavaScript written by this project. StoryCast has not
+      independently verified caption presence or accuracy for either video —
+      see `research-notes.md`.
 - [x] The feedback form on `about.html` is a real, working HTML form
       (`action="mailto:..." enctype="text/plain"`) — submitting it opens the
       visitor's email client with the report pre-filled. No fake/inert
@@ -61,13 +65,15 @@ been earned yet.
 
 ## Pending — requires real content/media or formal testing
 
-- [ ] Produce and attach real WebVTT caption files for video once a real
-      recording exists.
-- [ ] Produce and attach real, verified transcripts once a real recording
-      exists.
-- [ ] Add `alt` text once real images replace the current text placeholders
-      (no `<img>` elements are in use yet, so there is no alt text to
-      validate).
+- [ ] Produce and attach real WebVTT caption files for any future
+      self-hosted video (the two videos currently on the site are embedded
+      externally from YouTube and use that platform's own caption system).
+- [ ] Produce and attach real, verified transcripts for the two embedded
+      testimonies, with the original publishers' involvement.
+- [x] The home-page hero now has a real `<img>` with descriptive `alt` text
+      (see `docs/research-notes.md` for its unresolved rights status —
+      **do not treat this as "done" for submission purposes** until that is
+      resolved).
 - [ ] Formal automated accessibility scan (axe, Lighthouse) against the
       final content and design.
 - [ ] Manual screen reader testing (VoiceOver, NVDA) across all three pages.

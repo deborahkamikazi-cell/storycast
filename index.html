@@ -93,13 +93,13 @@
       </div>
 
       <figure class="media-figure">
-        <div class="media-figure__placeholder">
-          Image to be added: Kigali Genocide Memorial — Flame of Remembrance,
-          Gisozi Hill (pending verified, rights-cleared photography)
-        </div>
+        <img
+          class="media-figure__image"
+          src="assets/images/home-hero-kigali-memorial-flame.png"
+          alt="A dignitary lights a ceremonial flame at an outdoor memorial site in Kigali, surrounded by official attendees.">
         <figcaption>
-          <span class="media-figure__title">Kigali Genocide Memorial — Flame of Remembrance, Gisozi Hill</span>
-          <span>Photography pending</span>
+          <span class="media-figure__title">Flame of Remembrance lighting ceremony, Kigali Genocide Memorial</span>
+          <span>Source unconfirmed — pending rights verification before publication</span>
         </figcaption>
       </figure>
     </section>
@@ -160,23 +160,23 @@
         <div>
           <div class="media-panel">
             <div class="media-panel__badges">
-              <span class="chip chip--on-dark">Archived Video</span>
-              <span class="chip chip--on-dark">Low-Bandwidth Audio Mode</span>
+              <span class="chip chip--on-dark">External Video · YouTube</span>
+              <span class="chip chip--on-dark">Source: United Nations</span>
             </div>
-            <p class="media-placeholder">
-              Media to be added — video not yet provided
-            </p>
-            <!--
-              TODO (media): Insert the verified video source once provided,
-              and ensure a matching caption file exists in assets/captions/.
-
-              <video controls preload="metadata" poster="assets/images/TODO-poster.jpg">
-                <source src="assets/video/TODO-remembering-1994.mp4" type="video/mp4">
-                <track kind="captions" src="assets/captions/TODO-remembering-1994.vtt" srclang="en" label="English captions" default>
-              </video>
-            -->
-            <p class="media-panel__note">
-              <span>Full audio/video and a synchronized transcript will be available on the Story Detail page once source recordings are verified.</span>
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/XEJ2XoIw-MM"
+                title="Testimony of a Genocide Survivor from Rwanda | United Nations"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                loading="lazy"
+                allowfullscreen></iframe>
+            </div>
+            <p class="media-panel__credit">
+              Published by the
+              <a href="https://www.youtube.com/@unitednations" target="_blank" rel="noopener">United Nations</a>
+              on YouTube. Use the player's own CC button for captions, if
+              available for this video.
             </p>
           </div>
         </div>
@@ -184,33 +184,33 @@
         <div class="featured-media__meta">
           <div class="tag-row">
             <span class="chip">Oral History</span>
-            <span class="chip">Karongi District</span>
+            <span class="chip">Survivor Testimony</span>
             <span class="chip">1994</span>
           </div>
-          <h3>Voices of Remembrance: Surviving Through Memory and Hope</h3>
+          <h3>Testimony of a Genocide Survivor from Rwanda</h3>
           <p>
-            A first-hand historical account recorded in Karongi District,
-            Western Province, documenting survival, resilience, and community
-            during the 1994 Genocide against the Tutsi. Full transcript,
-            captions, and verified source attribution are in progress — see
-            the <a href="story/remembering-1994.html">Story Detail page</a>.
+            A recorded survivor testimony published by the United Nations,
+            presented here to support remembrance and education. StoryCast
+            has not produced its own transcript for this video — see the
+            player's caption button, or the publisher's own channel, for
+            text access.
           </p>
           <dl class="meta-list">
             <div class="meta-list__row">
-              <dt>Catalog identifier</dt>
-              <dd>Pending assignment upon verified intake</dd>
+              <dt>Publisher</dt>
+              <dd>United Nations (YouTube)</dd>
             </div>
             <div class="meta-list__row">
-              <dt>Translations</dt>
-              <dd>Kinyarwanda (original), English</dd>
+              <dt>Watch directly</dt>
+              <dd><a href="https://www.youtube.com/watch?v=XEJ2XoIw-MM" target="_blank" rel="noopener">youtube.com/watch?v=XEJ2XoIw-MM ↗</a></dd>
             </div>
           </dl>
           <div class="hero__actions">
             <a class="btn btn--primary" href="story/remembering-1994.html">
-              Open Full Story &amp; Transcript
+              Read Another Survivor's Story
               <svg class="icon" width="16" height="16" aria-hidden="true"><use href="#icon-play"></use></svg>
             </a>
-            <a class="btn btn--icon" href="mailto:?subject=StoryCast%20%E2%80%94%20Remembering%201994&amp;body=https%3A%2F%2Fexample.org%2Fstory%2Fremembering-1994.html" aria-label="Share this story by email">
+            <a class="btn btn--icon" href="mailto:?subject=StoryCast%20%E2%80%94%20Remembering%201994&amp;body=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DXEJ2XoIw-MM" aria-label="Share this video by email">
               <svg class="icon" width="16" height="16" aria-hidden="true"><use href="#icon-mail"></use></svg>
             </a>
           </div>

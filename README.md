@@ -198,13 +198,24 @@ the complete, honestly-labeled list. Headline items:
 
 ## 11. Media & transcript status
 
-No real audio, video, caption, or transcript files exist in `assets/`. Every
-media area on the Story Detail page shows an accessible "Media to be added"
-placeholder, with the real `<video>`/`<audio>`/`<track>` markup present but
-commented out with `TODO` notes for exactly what file paths to fill in. The
-transcript section demonstrates the intended structure (including a
-"synced segment" style) using placeholder text explicitly marked as not a
-real transcript.
+Two real testimony videos are now embedded, via the standard YouTube
+`iframe` embed (not downloaded or re-hosted):
+
+- **Home page** — "Testimony of a Genocide Survivor from Rwanda," published
+  by the United Nations.
+- **Story Detail page** — the testimony of Béatha Mukarubuga ("Maman
+  Lambert"), published by Aegis Trust (which manages the Kigali Genocide
+  Memorial).
+
+Both were confirmed via YouTube's public oEmbed metadata before use. No
+file has been copied into this repository — `assets/video/`, `assets/audio/`,
+`assets/captions/`, and `assets/transcripts/` remain empty, and the
+`<video>`/`<audio>`/`<track>` markup prepared for a *future self-hosted*
+recording is still present as commented-out example code. StoryCast has
+**not** produced its own transcript for either embedded video — captions
+depend entirely on what the publisher has uploaded to YouTube, accessible
+via the player's own CC button. See
+[`docs/research-notes.md`](docs/research-notes.md) for the full source log.
 
 ## 12. Validation performed this session
 
@@ -248,7 +259,7 @@ literally would have meant publishing misinformation:
 | A "WCAG 2.1 AA VERIFIED" badge | "Targeting WCAG 2.1 AA" | No formal accessibility audit has been performed yet. |
 | Specific GPS coordinates, SHA-256 hash fragments, checksum dates, and accession numbers presented as verified archival data | "Not yet assigned" / "Map to be added" / general region names only | These implied a level of verification and audit that has not happened. |
 | An "Advisory Council" naming real, identifiable historians (e.g. a named genocide historian and a named academic) as endorsers | Role titles only, each marked "Seat unfilled — pending appointment" | Naming real people as advisors/endorsers without their knowledge or consent would misattribute a real person's name to a fictional project. |
-| A custom-styled media player UI (scrubber, caption toggle, speed control) | Native `<video controls>` / `<audio controls>` (prepared, commented until real files exist) | This project uses no JavaScript, and a custom player UI that doesn't actually play/scrub anything would be a non-functional, misleading control. |
+| A custom-styled media player UI (scrubber, caption toggle, speed control) | For the two real testimonies: the standard YouTube `iframe` embed, which gives a real, working, keyboard-accessible native player for free. For any *future self-hosted* clip: `<video controls>` / `<audio controls>` (prepared, commented until a file exists). | This project uses no JavaScript, and a custom player UI that doesn't actually play/scrub anything would be a non-functional, misleading control. |
 | A functional-looking search/filter bar returning "1,249 documented testimonies" | The same layout, with all controls `disabled` and an honest note that search isn't implemented | The site contains exactly one placeholder story; claiming a large searchable corpus would be misleading. |
 | "Copy Citation"/clipboard-copy buttons | Selectable text with a "select to copy" note | Clipboard copy requires JavaScript, which this project does not use. |
 | Exact Figma font files | System serif/sans stacks (Georgia-based heading stack, system-ui body stack) | No font files or Google Fonts link were supplied, and adding a web-font dependency wasn't part of the brief. |

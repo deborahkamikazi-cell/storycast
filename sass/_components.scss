@@ -244,6 +244,19 @@
     }
   }
 
+  // Real photograph variant — same footprint/proportions as the placeholder
+  // above, so swapping one for the other never shifts surrounding layout.
+  .media-figure__image {
+    display: block;
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+
+    @media (min-width: 48rem) {
+      height: 22rem;
+    }
+  }
+
   .media-figure figcaption {
     position: absolute;
     inset-inline: 0;
@@ -472,6 +485,33 @@
     width: 100%;
     border-radius: var(--radius-sm);
     background-color: #000;
+  }
+
+  // Responsive 16:9 wrapper for embedded YouTube videos. `aspect-ratio`
+  // keeps the iframe's proportions correct at any width without any
+  // JavaScript or the old padding-bottom-percentage hack.
+  .video-embed {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  .video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  .media-panel__credit {
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .media-panel__credit a {
+    color: var(--color-white);
   }
 
   .media-panel__caption {
