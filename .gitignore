@@ -1,0 +1,13 @@
+# Operating-system-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/temporary files
+*.log
+*.tmp
+.vscode/*
+!.vscode/extensions.json
+
+# Sass source maps (not needed for submission; compiled CSS itself is kept)
+css/*.map

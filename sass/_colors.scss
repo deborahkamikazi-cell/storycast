@@ -1,0 +1,47 @@
+// =============================================================================
+// COLORS — Design Tokens
+// -----------------------------------------------------------------------------
+// Extracted from the StoryCast Figma screenshots: a warm, cream "archival
+// paper" background with near-black ink text, white record cards, thin tan
+// borders, and a muted olive-green accent used sparingly for verified/synced
+// states. Contrast ratios below are checked against their paired background.
+// =============================================================================
+
+@layer base {
+  :root {
+    // Core palette
+    --color-cream: #f7f3ec; // page background ("archival paper")
+    --color-cream-deep: #efe9de; // ribbon bars / muted section backgrounds
+    --color-white: #ffffff; // cards
+    --color-ink: #1d1a15; // primary text / headings
+    --color-ink-soft: #4a443b; // secondary text
+    --color-stone: #8a8275; // muted/meta text (AA against cream & white)
+    --color-border: #ded5c4; // card & rule borders
+    --color-border-strong: #c9bda5;
+    --color-near-black: #16140f; // solid buttons, dark banners
+
+    // Accent — used sparingly for "verified / synced / active" states
+    --color-accent: #4b5a33; // muted olive-green
+    --color-accent-contrast: #ffffff;
+    --color-accent-bg: #eef1e6; // tinted background for accent chips
+
+    // Semantic tokens
+    --color-bg: var(--color-cream);
+    --color-bg-muted: var(--color-cream-deep);
+    --color-bg-surface: var(--color-white);
+    --color-bg-inverse: var(--color-near-black);
+
+    --color-text: var(--color-ink);
+    --color-text-muted: var(--color-ink-soft);
+    --color-text-faint: var(--color-stone);
+    --color-text-inverse: var(--color-white);
+
+    --color-link: var(--color-ink);
+    --color-button-bg: var(--color-near-black);
+    --color-button-text: var(--color-white);
+
+    // Focus indicator — kept as a strong, universally legible blue regardless
+    // of the archive palette, per WCAG focus-visibility best practice.
+    --color-focus: #1a73e8;
+  }
+}

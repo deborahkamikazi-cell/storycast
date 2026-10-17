@@ -1,0 +1,118 @@
+// =============================================================================
+// TYPOGRAPHY — Design Tokens & Heading Hierarchy
+// -----------------------------------------------------------------------------
+// The Figma designs pair a serif display face for headings with a clean sans
+// body face. No external font files were supplied, so this uses robust,
+// widely-installed serif/sans system stacks that achieve the same visual
+// intent without a network font request (see README "Known limitations").
+// =============================================================================
+
+@layer base {
+  :root {
+    --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif;
+    --font-family-heading: Georgia, "Iowan Old Style", "Palatino Linotype",
+      "Book Antiqua", serif;
+    --font-family-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas,
+      monospace;
+
+    // "Readability Font Mode" fallback stack — a user-togglable alternative
+    // body face with simple, highly-distinct letterforms. Not the real
+    // OpenDyslexic typeface (no font file was supplied); see README.
+    --font-family-readable: Verdana, Tahoma, "Trebuchet MS", sans-serif;
+
+    // Fluid type scale
+    --font-size-xs: clamp(0.72rem, 0.7rem + 0.1vw, 0.8rem);
+    --font-size-sm: clamp(0.82rem, 0.8rem + 0.1vw, 0.9rem);
+    --font-size-base: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+    --font-size-md: clamp(1.125rem, 1.08rem + 0.25vw, 1.3rem);
+    --font-size-lg: clamp(1.375rem, 1.3rem + 0.4vw, 1.65rem);
+    --font-size-xl: clamp(1.75rem, 1.55rem + 1vw, 2.5rem);
+    --font-size-xxl: clamp(2.1rem, 1.8rem + 1.6vw, 3.1rem);
+
+    --line-height-tight: 1.15;
+    --line-height-heading: 1.25;
+    --line-height-base: 1.65;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --letter-spacing-label: 0.09em;
+
+    // User-controlled font scale multiplier, toggled with zero JS via the
+    // CSS-only text-scale control in _accessibility.scss (checkbox + :has()).
+    --user-font-scale: 1;
+  }
+
+  html {
+    font-family: var(--font-family-base);
+    font-size: 100%;
+  }
+
+  body {
+    font-family: var(--font-family-base);
+    font-size: calc(var(--font-size-base) * var(--user-font-scale));
+    line-height: var(--line-height-base);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-heading);
+    line-height: var(--line-height-heading);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--font-size-xxl);
+    line-height: var(--line-height-tight);
+  }
+
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  h4 {
+    font-size: var(--font-size-md);
+    font-family: var(--font-family-base);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  p,
+  li,
+  dd {
+    max-width: 68ch;
+  }
+
+  a {
+    color: var(--color-link);
+  }
+
+  // Small, letter-spaced "eyebrow" labels used throughout the archive UI
+  // (e.g. "ARCHIVE / REMEMBRANCE", "FEATURED AUDIO-VISUAL ARCHIVAL RECORD").
+  .label {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+  }
+
+  .label--on-dark {
+    color: rgba(255, 255, 255, 0.72);
+  }
+}
