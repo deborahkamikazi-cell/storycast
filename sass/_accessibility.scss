@@ -1,29 +1,12 @@
-// =============================================================================
-// ACCESSIBILITY — Focus States, Skip Link, Reduced Motion, CSS-only Toggles
-// -----------------------------------------------------------------------------
-// This project allows no JavaScript. The "Accessibility Mode", "Text Scale",
-// and "Readability Font Mode" controls from the Figma designs are still
-// implemented as *real, working* native controls (checkboxes/radio inputs)
-// using the modern `:has()` relational pseudo-class, so a real user can
-// actually operate them with mouse, keyboard, or screen reader — no inert
-// decoration. `:has()` is supported in current Chrome, Edge, Safari, and
-// Firefox (121+); in older browsers the controls remain visible, labeled,
-// and focusable, they simply have no visual effect yet (graceful
-// degradation — never a broken or fake control).
-// =============================================================================
+
 
 @layer utilities {
-  // ---------------------------------------------------------------------------
-  // Visible keyboard focus
-  // ---------------------------------------------------------------------------
+ 
   :focus-visible {
     outline: 3px solid var(--color-focus);
     outline-offset: 2px;
   }
-
-  // ---------------------------------------------------------------------------
-  // Skip-to-main-content link
-  // ---------------------------------------------------------------------------
+---
   .skip-link {
     position: absolute;
     top: -3rem;
@@ -41,9 +24,6 @@
     }
   }
 
-  // ---------------------------------------------------------------------------
-  // Screen-reader-only text
-  // ---------------------------------------------------------------------------
   .sr-only {
     position: absolute;
     width: 1px;
@@ -56,9 +36,7 @@
     border: 0;
   }
 
-  // ---------------------------------------------------------------------------
-  // Reduced motion
-  // ---------------------------------------------------------------------------
+ 
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -70,9 +48,7 @@
     }
   }
 
-  // ---------------------------------------------------------------------------
-  // CSS-only "Text Scale" control (radio group: A- / A / A+)
-  // ---------------------------------------------------------------------------
+
   html:has(#text-scale-sm:checked) {
     --user-font-scale: 0.88;
   }
@@ -88,9 +64,7 @@
     color: var(--color-white);
   }
 
-  // ---------------------------------------------------------------------------
-  // CSS-only "Readability Font Mode" toggle
-  // ---------------------------------------------------------------------------
+
   html:has(#readable-font-toggle:checked) body {
     font-family: var(--font-family-readable);
     letter-spacing: 0.01em;
@@ -110,11 +84,6 @@
     border-color: var(--color-near-black);
   }
 
-  // ---------------------------------------------------------------------------
-  // CSS-only sitewide "Accessibility Mode" toggle (header utility link)
-  // ---------------------------------------------------------------------------
-  // Strengthens line-height, link affordance, and focus visibility for users
-  // who need a lower-effort reading mode.
   html:has(#a11y-mode-toggle:checked) body {
     line-height: 1.9;
   }

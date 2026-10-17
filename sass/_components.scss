@@ -1,22 +1,12 @@
-// =============================================================================
-// COMPONENTS — Buttons, Badges, Cards, Media, Footer
-// -----------------------------------------------------------------------------
-// BEM naming (block__element--modifier) throughout.
-// =============================================================================
+
 
 @layer components {
-  // ---------------------------------------------------------------------------
-  // Ribbon / utility bar text
-  // ---------------------------------------------------------------------------
   .ribbon__text {
     font-size: var(--font-size-xs);
     color: var(--color-text-faint);
     letter-spacing: 0.02em;
   }
 
-  // ---------------------------------------------------------------------------
-  // Brand / logo
-  // ---------------------------------------------------------------------------
   .brand {
     display: inline-flex;
     align-items: center;
@@ -58,9 +48,6 @@
     color: var(--color-text-faint);
   }
 
-  // ---------------------------------------------------------------------------
-  // Navigation links
-  // ---------------------------------------------------------------------------
   .site-nav__link {
     display: inline-block;
     padding-block: var(--space-1);
@@ -109,9 +96,6 @@
     font-weight: var(--font-weight-bold);
   }
 
-  // ---------------------------------------------------------------------------
-  // Breadcrumb
-  // ---------------------------------------------------------------------------
   .breadcrumb__trail {
     display: flex;
     flex-wrap: wrap;
@@ -119,9 +103,6 @@
     align-items: center;
   }
 
-  // ---------------------------------------------------------------------------
-  // Buttons
-  // ---------------------------------------------------------------------------
   .btn {
     display: inline-flex;
     align-items: center;
@@ -173,9 +154,6 @@
     line-height: 1;
   }
 
-  // ---------------------------------------------------------------------------
-  // Chips / tags / badges
-  // ---------------------------------------------------------------------------
   .chip {
     display: inline-flex;
     align-items: center;
@@ -207,16 +185,10 @@
     gap: var(--space-2);
   }
 
-  // ---------------------------------------------------------------------------
-  // Hero
-  // ---------------------------------------------------------------------------
   .hero__lead {
     color: var(--color-text-muted);
   }
 
-  // ---------------------------------------------------------------------------
-  // Media figure with overlaid caption (hero image, about-page hero image)
-  // ---------------------------------------------------------------------------
   .media-figure {
     position: relative;
     border-radius: var(--radius-md);
@@ -244,8 +216,6 @@
     }
   }
 
-  // Real photograph variant — same footprint/proportions as the placeholder
-  // above, so swapping one for the other never shifts surrounding layout.
   .media-figure__image {
     display: block;
     width: 100%;
@@ -276,9 +246,6 @@
     font-size: var(--font-size-sm);
   }
 
-  // ---------------------------------------------------------------------------
-  // Search / filter bar
-  // ---------------------------------------------------------------------------
   .field-label {
     display: block;
     font-size: var(--font-size-xs);
@@ -314,9 +281,6 @@
     color: var(--color-text-faint);
   }
 
-  // ---------------------------------------------------------------------------
-  // Story card / feature card / related card — shared card primitive
-  // ---------------------------------------------------------------------------
   .card {
     display: flex;
     flex-direction: column;
@@ -359,7 +323,6 @@
     color: var(--color-text-muted);
   }
 
-  // Story card — horizontal by default; a modifier of `.card`.
   .story-card {
     flex-direction: row;
     flex-wrap: wrap;
@@ -376,10 +339,6 @@
     gap: var(--space-2);
   }
 
-  // Related story card — image on top, content below. Self-contained
-  // placeholder styling (not combined with `.media-figure__placeholder`,
-  // whose `min-height` would conflict with `aspect-ratio` and force an
-  // oversized intrinsic width, breaking the grid's equal-width columns).
   .related-card__media {
     aspect-ratio: 4 / 3;
     border-radius: var(--radius-sm);
@@ -394,23 +353,13 @@
     font-size: var(--font-size-xs);
   }
 
-  // CSS CONTAINER QUERY
-  // -----------------------------------------------------------------------
-  // `.card-grid` (see _layout.scss) is an inline-size containment context.
-  // When an individual `.story-card`'s own available width drops below
-  // 26rem — whether from a narrow viewport, or from the grid placing two or
-  // three cards per row on a wide screen — it switches from a horizontal to
-  // a vertical layout. This reacts to the component's own container, which a
-  // plain viewport media query cannot do.
+
   @container card-grid (max-width: 26rem) {
     .story-card {
       flex-direction: column;
     }
   }
 
-  // ---------------------------------------------------------------------------
-  // Mini timeline (inside the "100 Days Timeline" feature card)
-  // ---------------------------------------------------------------------------
   .mini-timeline {
     display: flex;
     flex-direction: column;
@@ -429,10 +378,6 @@
     color: var(--color-text-faint);
     font-size: var(--font-size-xs);
   }
-
-  // ---------------------------------------------------------------------------
-  // Stat box (e.g. "100% Trauma Protocols")
-  // ---------------------------------------------------------------------------
   .stat-grid {
     display: flex;
     gap: var(--space-3);
@@ -459,9 +404,6 @@
     color: var(--color-text-faint);
   }
 
-  // ---------------------------------------------------------------------------
-  // Featured media (home) / media player (story detail)
-  // ---------------------------------------------------------------------------
   .media-panel {
     position: relative;
     display: flex;
